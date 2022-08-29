@@ -1,0 +1,111 @@
+/* You can add global styles to this file, and also import /* Chrome e outros */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+    
+h2{
+  font-size: 22px;
+}
+
+.border{
+  width: 300px;
+  height: 2px;
+  background-color: rgb(151, 148, 148);
+  margin-bottom: 20px;
+}
+
+.finance {
+    font-family:  cursive;
+    color: #000;
+    font-size: 1em;
+    width: 400px;
+    font-weight: 300;
+    text-align: center;
+    box-shadow: 5px 5px 8px #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: auto;
+}
+
+  #plus {
+    color: rgb(24, 168, 67);
+  }
+
+  #minus {
+    color:rgb(176, 23, 23)
+  }
+
+  #none{
+    color:rgb(152, 142, 142);
+  }
+
+  input{
+    border-radius: 10px;
+    margin-top: 50px;
+    width: 200px;
+    height: 27px;
+    text-align: center;
+    box-shadow: 1px 1px 4px #000;
+    outline: 0px;
+    border: rgb(106, 104, 104);
+  }
+
+  button {
+    width: 240px;
+    border-radius: 10px;
+   margin-top: 40px;
+   height: 30px;
+   margin-bottom: 20px;
+   color: #FFF;
+   background-color: rgb(14, 11, 11);
+  }
+
+.gl-container{
+    display: flex;
+    flex-direction: row;
+}
+
+#gain {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   flex-direction: column;
+   margin-right: 10px;
+}
+
+#gain>h3{
+  color: rgb(68, 147, 68);
+  padding:7px;
+  border-radius: 10px;
+}
+
+#lost{
+  display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   flex-direction: column;
+}
+
+#lost>h3 {
+  color: rgb(192, 39, 39);
+  padding:7px;
+  border-radius: 10px;
+}
+
+#first_input{
+    margin-top: 10px;
+}

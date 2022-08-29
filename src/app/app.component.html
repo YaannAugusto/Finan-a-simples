@@ -1,0 +1,58 @@
+<div class="finance">
+<h1>{{ title }}</h1>
+<h2>Saldo Atual</h2>
+  <div>
+    <h3 *ngIf="count>0" id="plus">R$ {{ count }}</h3>
+    <h3 *ngIf="count<0" id="minus">R$ {{ count }}</h3>
+    <h3 *ngIf="count==0" id="none">R$ {{ count }}</h3>
+  </div>
+
+  <div class="border"></div>
+
+  <div class="gl-container">
+    <div id="gain">
+      <h2>Receitas</h2>
+      <h3>R$ {{ countPos }}</h3>
+    </div>
+
+    <div id="lost">
+      <h2>Despesas</h2>
+      <h3>R$ {{ countNeg }}</h3>
+    </div>
+  </div>
+
+  <div class="border"></div>
+
+  <ul>
+    <li *ngFor="let finance of finances"> 
+      {{finance.id}}. {{finance.spent}} || R${{finance.cost}} 
+      <div *ngIf="finance.gain"></div>
+      <div *ngIf="!finance.gain"></div>
+    </li>
+  </ul>
+
+  <div>
+    <form [formGroup] = "form">
+      <input type="text" placeholder ="Nome da Transação" formControlName="spent" id="first_input" >
+      <!--<small *ngIf = "form.controls['spent'].invalid && !form.controls['spent'].pristine" >O ganho ou o gasto tem que ter de 3 a 30 caracteres!</small>-->
+    
+      <div>
+        <input type="number"  placeholder="Quantidade de dinheiro"   formControlName="cost">
+      </div>
+
+      <div>
+        <input type="text" placeholder="Receita(+) ou despesa(-)?"  maxlength="1"  formControlName="sym"> 
+      </div>
+
+    <!--[disabled] ="form.invalid"-->
+      <p>
+        <button (click)="add()"  [disabled] ="form.invalid">Salvar</button>
+      </p>
+    </form>
+  </div>
+</div>
+
+
+<!--type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />--->
+
+<!--<input type="text" required="required" name="text" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" />COPIA-->
